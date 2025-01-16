@@ -1,7 +1,12 @@
-export interface Agent {
+type Saved<T> = T & {
     id: string;
+    lastSeen: string;
+};
+
+export type AgentBase = {
     name: string;
     email: string;
     status: 'Active' | 'Inactive';
-    lastSeen: string;
 }
+
+export type Agent = Saved<AgentBase>;

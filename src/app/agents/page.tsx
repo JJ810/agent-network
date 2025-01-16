@@ -5,7 +5,11 @@ import AgentList from "@/components/AgentList";
 import Link from "next/link";
 
 const AgentsPage: React.FC = () => {
-  const { agents } = useContext(AgentContext);
+  const { agents, deleteAgent } = useContext(AgentContext);
+
+  const handleDeleteAgent = (id: string) => {
+    deleteAgent(id);
+  };
 
   return (
     <div className="container mx-auto p-6">
@@ -20,7 +24,7 @@ const AgentsPage: React.FC = () => {
       </div>
 
       {agents.length > 0 ? (
-        <AgentList agents={agents} />
+        <AgentList agents={agents} onDelete={handleDeleteAgent} />
       ) : (
         <p className="text-gray-500">
           No agents found. Click "Add Agent" to create one.

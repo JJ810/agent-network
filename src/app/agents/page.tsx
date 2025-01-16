@@ -22,14 +22,7 @@ const AgentsPage: React.FC = () => {
           </button>
         </Link>
       </div>
-
-      {agents.length > 0 ? (
-        <AgentList agents={agents} onDelete={handleDeleteAgent} />
-      ) : (
-        <p className="text-gray-500">
-          No agents found. Click "Add Agent" to create one.
-        </p>
-      )}
+      <AgentList agents={agents} onDelete={handleDeleteAgent} />
     </div>
   );
 };

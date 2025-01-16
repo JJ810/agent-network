@@ -2,7 +2,7 @@ import { Agent } from "@/types/agent";
 import dayjs from "dayjs";
 import React, { useState } from "react";
 import Link from "next/link";
-import ConfirmationModal from "./ConfirmationModal";
+import ConfirmationModal from "../ConfirmationModal";
 
 interface AgentListProps {
   agents: Agent[];
@@ -30,6 +30,14 @@ const AgentList: React.FC<AgentListProps> = ({ agents, onDelete }) => {
     setShowPopup(false);
     setAgentToDelete(null);
   };
+
+  if (!agents.length) {
+    return (
+      <p className="text-gray-500">
+        No agents found. Click "Add Agent" to create one.
+      </p>
+    );
+  }
 
   return (
     <>

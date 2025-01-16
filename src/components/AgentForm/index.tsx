@@ -32,9 +32,6 @@ const AgentForm: React.FC<AgentFormProps> = ({
     if (!formData.email?.trim()) {
       newErrors.email = "Email is required.";
       valid = false;
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Invalid email address.";
-      valid = false;
     }
 
     setErrors(newErrors);

@@ -66,6 +66,8 @@ Network of Agents(Home Assessment)
    npm run test
    ```
 
+![Short Video](https://www.loom.com/share/8e1937ad52684a45ae22e6a6ebf1627a?sid=a9eb9dad-0395-45f4-bb76-acb167f3633a)
+
 ![No Agent](https://github.com/jj810/agent-network/blob/main/public/screenshots/1.png?raw=true)
 ![Agents List](https://github.com/jj810/agent-network/blob/main/public/screenshots/2.png?raw=true)
 ![Add Agent Page](https://github.com/jj810/agent-network/blob/main/public/screenshots/3.png?raw=true)

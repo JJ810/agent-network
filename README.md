@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Agent Management App
 
-## Getting Started
+Network of Agents(Home Assessment)
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Core Features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **List of Agents**: Displays a list of agents with their details:
+  - Name
+  - Email
+  - Status (Active/Inactive)
+  - Last Seen Date
+- **Add Agent**: A form to add a new agent.
+  - Name (Text input)
+  - Email (Validated email input)
+  - Status (Active/Inactive dropdown)
+- **Edit Agent**: Allows editing an agent's details.
+- **Delete Agent**: An option to delete an agent with a confirmation popup.
+- **State Management**: Uses React Context to manage state across the application.
+- **Persistent Storage**: Agent data is saved in `localStorage` so it persists across page reloads.
+- **Form Validation**: Basic validation for required fields (e.g., email validation).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Optional Features (Implemented):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Responsive Design**: Make the UI responsive and mobile-friendly.
+- **Unit Tests**: Basic unit tests for components using Jest and React Testing Library.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js (v15)**: A React framework for building server-side rendered applications.
+  - **_Why:_** This app is to handle the list of agents and Nextjs is useful for Incremental Static Regeneration (ISR)
+- **TypeScript**: Adds type safety and modern JavaScript features.
+- **Tailwind CSS**: A utility-first CSS framework for styling the app.
+- **Jest & React Testing Library**: For unit testing React components.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Instructions to Run the Application
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone the Repository**:
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/jj810/agent-network.git
+   cd agent-network
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install Dependencies**:
+   Ensure you have Node.js installed. Then, run:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm install
+   ```
+
+3. **Run the Application**:
+   To start the application locally, use the following command:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the Application**:
+   Open your browser and go to [http://localhost:3000](http://localhost:3000). You should see the agent management dashboard.
+
+5. **Run Unit Tests**:
+   To run the unit tests, use:
+   ```bash
+   npm run test
+   ```

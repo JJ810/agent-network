@@ -48,8 +48,8 @@ describe("AgentList", () => {
 
     const editLinks = screen.getAllByRole("link", { name: "Edit" });
 
-    expect(editLinks[0]).toHaveAttribute("href", "/agents/1"); // Check the first agent's URL
-    expect(editLinks[1]).toHaveAttribute("href", "/agents/2"); // Check the second agent's URL
+    expect(editLinks[0]).toHaveAttribute("href", "/agents/1");
+    expect(editLinks[1]).toHaveAttribute("href", "/agents/2");
   });
 
   it('should display "No agents found" when the list is empty', () => {

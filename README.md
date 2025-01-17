@@ -65,3 +65,9 @@ Network of Agents(Home Assessment)
    ```bash
    npm run test
    ```
+
+![No Agent](https://github.com/jj810/agent-network/blob/main/public/screenshots/1.png?raw=true)
+![Agents List](https://github.com/jj810/agent-network/blob/main/public/screenshots/2.png?raw=true)
+![Add Agent Page](https://github.com/jj810/agent-network/blob/main/public/screenshots/3.png?raw=true)
+![Confirm to delete](https://github.com/jj810/agent-network/blob/main/public/screenshots/4.png?raw=true)
+![Unite testing coverage](https://github.com/jj810/agent-network/blob/main/public/screenshots/5.png?raw=true)

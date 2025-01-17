@@ -39,7 +39,7 @@ describe("AgentList", () => {
     fireEvent.click(deleteButtons[0]);
 
     expect(
-      screen.getByText("Are you sure you want to delete this agent?")
+      screen.getByText("Are you sure you want to delete this agent?"),
     ).toBeInTheDocument();
   });
 
@@ -56,7 +56,7 @@ describe("AgentList", () => {
     render(<AgentList agents={[]} onDelete={jest.fn()} />);
 
     expect(
-      screen.getByText('No agents found. Click "Add Agent" to create one.')
+      screen.getByText('No agents found. Click "Add Agent" to create one.'),
     ).toBeInTheDocument();
   });
 
@@ -67,14 +67,14 @@ describe("AgentList", () => {
     fireEvent.click(deleteButtons[0]);
 
     expect(
-      screen.getByText("Are you sure you want to delete this agent?")
+      screen.getByText("Are you sure you want to delete this agent?"),
     ).toBeInTheDocument();
     const confirmButton = screen.getByText("Confirm");
     fireEvent.click(confirmButton);
 
     expect(onDeleteMock).toHaveBeenCalledWith("1");
     expect(
-      screen.queryByText("Are you sure you want to delete this agent?")
+      screen.queryByText("Are you sure you want to delete this agent?"),
     ).not.toBeInTheDocument();
   });
 
@@ -85,14 +85,14 @@ describe("AgentList", () => {
     fireEvent.click(deleteButtons[0]);
 
     expect(
-      screen.getByText("Are you sure you want to delete this agent?")
+      screen.getByText("Are you sure you want to delete this agent?"),
     ).toBeInTheDocument();
 
     const cancelButton = screen.getByText("Cancel");
     fireEvent.click(cancelButton);
 
     expect(
-      screen.queryByText("Are you sure you want to delete this agent?")
+      screen.queryByText("Are you sure you want to delete this agent?"),
     ).not.toBeInTheDocument();
   });
 });

@@ -37,8 +37,8 @@ export const AgentProvider: React.FC<{ children: React.ReactNode }> = ({
   const updateAgent = (id: string, updatedAgent: Partial<Agent>) =>
     setAgents((prev) =>
       prev.map((agent) =>
-        agent.id === id ? { ...agent, ...updatedAgent } : agent
-      )
+        agent.id === id ? { ...agent, ...updatedAgent } : agent,
+      ),
     );
 
   const deleteAgent = (id: string) =>

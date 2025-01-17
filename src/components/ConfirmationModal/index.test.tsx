@@ -8,11 +8,11 @@ describe("ConfirmationModal Component", () => {
         message="Are you sure you want to delete this agent?"
         onConfirm={jest.fn()}
         onCancel={jest.fn()}
-      />
+      />,
     );
 
     expect(
-      screen.getByText(/are you sure you want to delete this agent\?/i)
+      screen.getByText(/are you sure you want to delete this agent\?/i),
     ).toBeInTheDocument();
   });
 
@@ -23,7 +23,7 @@ describe("ConfirmationModal Component", () => {
         message="Are you sure you want to delete this agent?"
         onConfirm={onConfirmMock}
         onCancel={jest.fn()}
-      />
+      />,
     );
 
     fireEvent.click(screen.getByText(/confirm/i));
@@ -37,7 +37,7 @@ describe("ConfirmationModal Component", () => {
         message="Are you sure you want to delete this agent?"
         onConfirm={jest.fn()}
         onCancel={onCancelMock}
-      />
+      />,
     );
 
     fireEvent.click(screen.getByText(/cancel/i));

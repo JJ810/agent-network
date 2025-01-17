@@ -34,7 +34,7 @@ const AgentList: React.FC<AgentListProps> = ({ agents, onDelete }) => {
   if (!agents.length) {
     return (
       <p className="text-gray-500">
-        No agents found. Click "Add Agent" to create one.
+        No agents found. Click &quot;Add Agent&quot; to create one.
       </p>
     );
   }
